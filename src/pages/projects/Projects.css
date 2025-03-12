@@ -1,0 +1,292 @@
+:root {
+    /* Layout-related variables */
+    --nav-height: 4rem;
+
+    /* Color palette */
+    --bg-color: #F4F0E0;                /* Site background color */
+    --accent-color: #2C3E50;            /* Navy accent color for headings, etc. */
+    --card-bg-color: #f9fafb;           /* Card background */
+    --border-color: #d1d5db;            /* Light gray border color */
+    --heading-color: #2C3E50;           /* Heading text color */
+    --secondary-text-color: #6b7280;    /* Lighter gray text */
+    --body-text-color: #374151;         /* Body text color */
+
+    /* Sizing and Radius */
+    --border-radius: 0.75rem;
+    --card-border-radius: 0.5rem;
+
+    /* Transitions and Shadows */
+    --transition-duration: 0.3s;
+    --transition-easing: ease;
+    --box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    /* Scrollbar behavior */
+    --scrollbar-width: none;
+}
+
+/* Projects Page Main Container */
+.projects-main {
+    background-color: var(--bg-color);
+    min-height: calc(100vh - var(--nav-height));
+
+    /* Enable scrolling within this container */
+    overflow-y: auto;
+
+    /* Hide scrollbar in Firefox */
+    scrollbar-width: var(--scrollbar-width);
+}
+
+/* Hide scrollbar in WebKit-based browsers (Chrome, Safari, Opera) */
+.projects-main::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+/* Projects Section */
+.projects-section {
+    /* Keep the box shadow and radius variable-based */
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow-default);
+}
+
+/* Projects Title */
+.projects-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* List Container - one card per row */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Spacing between cards */
+}
+
+/* Project Card */
+.project-card {
+    display: flex;
+    gap: 2rem;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow-default);
+    transition: transform var(--transition-duration) var(--transition-easing),
+    box-shadow var(--transition-duration) var(--transition-easing);
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Project Image */
+.project-image {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--card-border-radius);
+    flex-shrink: 0;
+}
+
+/* Project Content */
+.project-content {
+    flex: 1;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Project Date */
+.project-date {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+}
+
+/* Project Details */
+.project-details {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.project-details li {
+    margin-bottom: 0.5rem;
+    color: var(--body-text-color);
+}
+
+.project-details a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.project-details a:hover {
+    opacity: 0.8;
+}
+
+/* Show "associated with" text in a slightly lighter color / italic */
+.project-associated {
+    font-style: italic;
+    color: #6b7280; /* Lighter gray text */
+    margin-bottom: 0.5rem;
+}
+
+/* Project description text */
+.project-description {
+    margin-bottom: 1rem;
+    color: #374151;
+    line-height: 1.5;
+}
+
+/* Contributors Section */
+.contributors-section {
+    margin-top: 1rem;
+}
+
+.contributors-section h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--accent-color, #2C3E50);
+    margin-bottom: 0.5rem;
+}
+
+/* Horizontal row for contributor links */
+.contributors-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Individual contributor link */
+.contributor-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--accent-color, #2C3E50);
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.contributor-link:hover {
+    opacity: 0.8;
+}
+
+.contributors-count {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280; /* lighter gray text */
+}
+
+/* Sponsors Section */
+.sponsors-section {
+    margin-top: 1rem;
+}
+
+.sponsors-section h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--accent-color, #2C3E50);
+    margin-bottom: 0.5rem;
+}
+
+/* Horizontal row for sponsor links */
+.sponsors-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Individual sponsor item (icon + name) */
+.sponsor-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Sponsor link styles */
+.sponsor-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: var(--accent-color, #2C3E50);
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.sponsor-link:hover {
+    opacity: 0.8;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 1rem;
+}
+
+.skills-section h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--accent-color, #2C3E50);
+    margin-bottom: 0.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    padding: 0.5rem 0 0.5rem 0;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-right: 0.75rem;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.see-more-link,
+.repo-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--accent-color, #2C3E50);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.see-more-link:hover,
+.repo-link:hover {
+    opacity: 0.8;
+}
+
+.see-more-link::after {
+    font-weight: bold;
+}
+
+/* stack the image and text on narrow screens */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+}

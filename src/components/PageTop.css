@@ -1,0 +1,17 @@
+.page-top {
+    /* Take up remaining vertical space below the navbar */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* align content at the top */
+
+    /* Account for the navbar (4rem) and add dynamic top padding */
+    min-height: calc(100vh - 4rem);
+    padding-top: calc((100vh - 4rem) * 0.10);
+
+    /* Center content horizontally with some side padding */
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

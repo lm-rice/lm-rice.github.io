@@ -1,0 +1,13 @@
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F4F0E0;
+    margin: 0;
+    font-family: "Source Sans Pro", monospace;
+}

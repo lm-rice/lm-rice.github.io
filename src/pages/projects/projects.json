@@ -1,0 +1,54 @@
+[
+  {
+    "id": "profitquest",
+    "title": "ProfitQuest",
+    "image": "profitquest-logo.png",
+    "dateRange": "Sep 2024 - Present",
+    "associated": "Associated with Drexel University",
+    "description": "Collaborated with GreenHill Investment Reporting, Inc. alongside several Drexel students to produce an application designed for financial advisors to compete in simulated trading of financial instruments.",
+    "details": [
+      "Architected the application's data model due to significant experience at Nasdaq, including schema design",
+      "Implemented data ingest from the Polygon.io API as a scheduled microservice using Spring Boot",
+      "Engineered the data translation layer from Polygon.io API response to ProfitQuest entity",
+      "Built the core game loop, including leaderboard refresh and portfolio updates as prices change",
+      "Hardened the cloud security ruleset to enforce internal ProfitQuest service isolation",
+      "Deployed the application and PostgreSQL database to Azure"
+    ],
+    "seeMoreLink": "https://seniorproject.cci.drexel.edu/project/63df0163-d6a2-4d95-a646-e616342be401/",
+    "sponsors": [
+      {
+        "name": "GreenHill Investment Reporting, Inc.",
+        "linkedin": "https://www.linkedin.com/company/greenhill-investment-reporting/",
+        "website": "https://ghill.com/"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Joe Halcisak",
+        "linkedin": "https://www.linkedin.com/in/jhalcisak"
+      },
+      {
+        "name": "Jonathan Ebby",
+        "linkedin": "https://www.linkedin.com/in/jonathan-ebby"
+      },
+      {
+        "name": "Shynice Youmans",
+        "linkedin": "https://www.linkedin.com/in/sjyoumans"
+      },
+      {
+        "name": "Benjamin Lehman",
+        "linkedin": "https://www.linkedin.com/in/benjamin-lehman-634715213"
+      },
+      {
+        "name": "Steven Diep",
+        "linkedin": "https://www.linkedin.com/in/diepsteven"
+      },
+      {
+        "name": "Jenna Nguyen",
+        "linkedin": "https://www.linkedin.com/in/jenna09nguyen"
+      }
+    ],
+    "skills": ["Spring Boot", "PostgreSQL", "Azure", "Docker", "Hibernate", "TestContainers", "JUnit"],
+    "repo": ""
+  }
+]

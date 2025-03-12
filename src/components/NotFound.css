@@ -1,0 +1,9 @@
+.not-found-svg {
+    margin-bottom: 1rem;
+}
+
+.not-found-message {
+    font-size: 1.5rem;
+    color: #333;
+    font-family: "Source Sans Pro", monospace;
+}
