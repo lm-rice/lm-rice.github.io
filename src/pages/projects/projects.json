@@ -14,6 +14,7 @@
       "Hardened the cloud security ruleset to enforce internal ProfitQuest service isolation",
       "Deployed the application and PostgreSQL database to Azure"
     ],
+    "productPage": "https://ghill.com/profitquest/",
     "seeMoreLink": "https://seniorproject.cci.drexel.edu/project/63df0163-d6a2-4d95-a646-e616342be401/",
     "sponsors": [
       {

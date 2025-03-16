@@ -3,6 +3,26 @@
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+:root {
+    /* Navigation & Container Dimensions */
+    --nav-height: 4rem;
+    --container-padding: 2rem;
+    --container-min-height: calc(100vh - var(--nav-height));
+
+    /* Content Layout */
+    --content-max-width: 700px; /* limit line width for better readability */
+    --line-height: 1.6;         /* improve text readability with a comfortable line height */
+
+    /* Action Links */
+    --action-margin-top: 2rem;
+    --action-gap: 1.5rem;
+
+    /* Transitions & Colors */
+    --transition-duration: 0.3s;
+    --transition-easing: ease;
+    --accent-color: #2C3E50;
+}
+
 body {
     z-index: 0;
     height: 100vh;

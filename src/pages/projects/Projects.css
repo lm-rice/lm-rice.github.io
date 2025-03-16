@@ -46,9 +46,7 @@
 /* Projects Section */
 .projects-section {
     /* Keep the box shadow and radius variable-based */
-    border-radius: var(--border-radius);
     padding: 1.5rem;
-    box-shadow: var(--box-shadow-default);
 }
 
 /* Projects Title */

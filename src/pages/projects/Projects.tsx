@@ -14,7 +14,7 @@ interface Contributor {
     linkedin: string;
 }
 
-interface Project {
+export interface Project {
     id: string;
     title: string;
     dateRange?: string;
@@ -25,6 +25,7 @@ interface Project {
     sponsors?: Sponsor[];
     contributors?: Contributor[];
     skills?: string[];
+    productPage?: string;
     seeMoreLink?: string;
     repo?: string;
 }
@@ -81,8 +82,13 @@ const Skills: React.FC<{ skills: string[] }> = ({ skills }) => (
 );
 
 /* Call-to-Action Buttons */
-const ProjectActions: React.FC<{ seeMoreLink?: string; repo?: string }> = ({ seeMoreLink, repo }) => (
+const ProjectActions: React.FC<{ seeMoreLink?: string; productPage?: string; repo?: string }> = ({ seeMoreLink, productPage, repo }) => (
     <div className="project-actions">
+        {productPage && (
+            <a href={productPage} target="_blank" rel="noopener noreferrer" className="see-more-link">
+                Product Website →
+            </a>
+        )}
         {seeMoreLink && (
             <a href={seeMoreLink} target="_blank" rel="noopener noreferrer" className="see-more-link">
                 See More →
@@ -99,13 +105,15 @@ const ProjectActions: React.FC<{ seeMoreLink?: string; repo?: string }> = ({ see
 /* -------------------------- MAIN PROJECTS COMPONENT -------------------------- */
 
 const Projects: React.FC = () => {
+    const projects: Project[] = projectsData;
+
     return (
         <main className="projects-main">
             <div className="section-container">
                 <section className="projects-section">
                     <h1 className="projects-title">Projects</h1>
                     <div className="projects-list">
-                        {projectsData.map((project) => (
+                        {projects.map((project) => (
                             <div key={project.id} className="project-card">
                                 {project.image && (
                                     <img src={project.image} alt={`${project.title} Screenshot`} className="project-image" />
@@ -123,7 +131,11 @@ const Projects: React.FC = () => {
                                     {project.sponsors && <Sponsors sponsors={project.sponsors} />}
                                     {project.contributors && <Contributors contributors={project.contributors} />}
                                     {project.skills && <Skills skills={project.skills} />}
-                                    <ProjectActions seeMoreLink={project.seeMoreLink} repo={project.repo} />
+                                    <ProjectActions
+                                        seeMoreLink={project.seeMoreLink}
+                                        productPage={project.productPage}
+                                        repo={project.repo}
+                                    />
                                 </div>
                             </div>
                         ))}
